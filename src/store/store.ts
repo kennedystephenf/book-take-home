@@ -1,7 +1,7 @@
 import {combineReducers, configureStore} from '@reduxjs/toolkit'
 import {userApi} from "../services/UserApi.ts";
 import {bookApi} from "../services/BookApi.ts";
-import libraryReducer from './localBookUpdate.ts';
+import libraryReducer from './localLibrarySlice.ts';
 import {FLUSH, PAUSE, PERSIST, persistReducer, persistStore, PURGE, REGISTER, REHYDRATE,} from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 

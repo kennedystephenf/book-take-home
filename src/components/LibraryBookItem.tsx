@@ -1,6 +1,6 @@
 import {Box, Button, Card, Chip, Typography} from "@mui/material";
 import {useDispatch, useSelector} from "react-redux";
-import {removeBook, toggleBookReadStatus} from "../store/localBookUpdate.ts";
+import {removeBook, toggleBookReadStatus} from "../store/localLibrarySlice.ts";
 import {RootState} from "../store/store.ts";
 import styled from "@emotion/styled";
 

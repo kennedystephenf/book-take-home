@@ -1,30 +1,22 @@
-# React + TypeScript + Vite
+# Book Library Sample App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a sample app to manage a personal book library with a search powered via the OpenLibrary API. This was built
+using
+vite, react, mui, redux toolkit, rtk query, redux-persist and styled components
 
-Currently, two official plugins are available:
+## Installation and running
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To run the app, navigate to the base of the project and `npm install` and then vite handles the dev server
+via `npm run dev`.
 
-## Expanding the ESLint configuration
+The app is accessible at `http://localhost:5173/`.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Interaction
 
-- Configure the top-level `parserOptions` property like this:
+On first use the main screen will be mostly empty with a search input
+to search for books to add to the users library. After entering a query and hitting enter or the form button 3 results
+can return and the user can add them to their library. The user can update "read" status or remove the books from their
+library in this section.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+Updates to the users library are persisted via localstorage to somewhat simulate an API. 
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list

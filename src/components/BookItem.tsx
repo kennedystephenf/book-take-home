@@ -1,7 +1,7 @@
 import {Box, Button, Card, CircularProgress, Typography} from "@mui/material";
 import {useGetBookByIdQuery} from "../services/BookApi.ts";
 import {useDispatch} from "react-redux";
-import {addBook} from "../store/localBookUpdate.ts";
+import {addBook} from "../store/localLibrarySlice.ts";
 import styled from "@emotion/styled";
 
 const BookBox = styled(Box)`

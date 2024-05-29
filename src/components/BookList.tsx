@@ -3,11 +3,11 @@ import {useGetBookSearchQuery} from "../services/BookApi.ts";
 import {Book} from "../Models/Book.ts";
 import {BookItem} from "./BookItem.tsx";
 import {useDispatch} from "react-redux";
-import {addBookById} from "../store/localBookUpdate.ts";
+import {addBookById} from "../store/localLibrarySlice.ts";
 
 
 export const BookList = (props: { listQuery: string }) => {
-    const {data: bookData, isLoading} = useGetBookSearchQuery(props.listQuery);
+    const {data: bookData} = useGetBookSearchQuery(props.listQuery);
     const dispatch = useDispatch();
     return (
         <Grid container spacing={2}>
